@@ -31,3 +31,105 @@ footer{padding:46px 24px;background:var(--g);color:#fff}
 .hero-logo{width:min(430px,78vw);height:auto;display:block;margin:0 0 34px;filter:invert(1) brightness(2);}
 .langs .flag{width:25px;height:17px;display:inline-block;vertical-align:middle;box-shadow:0 0 0 1px #0003;border-radius:1px;}
 @media(max-width:900px){.hero-logo{width:min(360px,72vw)}.grid{grid-template-columns:repeat(2,1fr)}.nav{} }
+
+
+/* XS12 Visuals — responsive improvements */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
+body { overflow-x: hidden; }
+img { max-width: 100%; height: auto; }
+button, a, input, textarea { -webkit-tap-highlight-color: transparent; }
+
+.hero {
+  min-height: min(820px, 100svh);
+  padding: 110px 6vw 80px;
+  display: flex;
+  align-items: center;
+}
+.hero > div { width: min(100%, 1100px); }
+.hero-logo {
+  width: clamp(240px, 42vw, 560px);
+  max-height: 190px;
+  object-fit: contain;
+  object-position: left center;
+  margin-bottom: 24px;
+}
+.section { padding-left: clamp(22px, 6vw, 100px); padding-right: clamp(22px, 6vw, 100px); }
+.section h2 { max-width: 1000px; }
+.cols { gap: clamp(24px, 5vw, 80px); }
+.grid, .news { grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); }
+
+@media (max-width: 900px) {
+  header .bar { padding: 16px 22px; gap: 14px; }
+  header .brand img { width: 150px; max-width: 42vw; }
+  nav { gap: 14px; }
+  .langs { gap: 5px; }
+  .hero { padding-top: 100px; min-height: auto; }
+  .hero-logo { width: min(82vw, 430px); max-height: 150px; }
+  .cols { grid-template-columns: 1fr; }
+  .form-row { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 720px) {
+  header { position: sticky; top: 0; z-index: 1000; }
+  header .bar { min-height: 66px; }
+  header .brand img { width: 135px; }
+  .hamb { display: inline-flex !important; align-items: center; justify-content: center; }
+  nav {
+    display: none !important;
+    position: absolute;
+    top: 66px;
+    left: 0;
+    right: 0;
+    padding: 18px 22px 24px;
+    background: rgba(47,64,21,.98);
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    box-shadow: 0 10px 24px rgba(0,0,0,.18);
+  }
+  nav.open { display: flex !important; }
+  nav > a, nav .dropdown > button {
+    width: 100%;
+    padding: 13px 0;
+    text-align: left;
+  }
+  nav .dropdown .menu {
+    position: static;
+    display: none;
+    padding: 4px 0 8px 16px;
+    box-shadow: none;
+    background: transparent;
+  }
+  nav .dropdown:hover .menu,
+  nav .dropdown:focus-within .menu { display: block; }
+  nav .dropdown .menu a { padding: 9px 0; display: block; }
+  .langs { margin-left: auto; }
+  .langs button { padding: 5px 6px; gap: 4px; }
+  .langs b { font-size: 10px; }
+  .flag { width: 23px; height: 15px; }
+  .hero { padding: 78px 22px 60px; }
+  .hero-logo { width: min(88vw, 390px); max-height: 125px; }
+  .hero h1 { font-size: clamp(2.2rem, 10vw, 3.5rem); line-height: 1.02; }
+  .lead { font-size: 1rem; line-height: 1.6; }
+  .btn { display: inline-flex; width: 100%; justify-content: center; margin: 5px 0; }
+  .section { padding-top: 65px; padding-bottom: 65px; }
+  .section h2 { font-size: clamp(1.9rem, 8vw, 3rem); }
+  .grid, .news { grid-template-columns: 1fr; }
+  .panel { padding: 24px 20px; }
+  .contact-form { width: 100%; }
+  .footer-main { padding: 36px 22px; text-align: center; }
+  .footer-logo { width: min(80vw, 360px); }
+  .footer-icons { justify-content: center; }
+}
+
+@media (max-width: 430px) {
+  header .bar { padding: 13px 14px; }
+  header .brand img { width: 118px; }
+  .langs { gap: 1px; }
+  .langs button { border: 0; padding: 4px; }
+  .langs b { display: none; }
+  .flag { width: 22px; height: 15px; }
+  .hero { padding-left: 17px; padding-right: 17px; }
+  .section { padding-left: 17px; padding-right: 17px; }
+}

@@ -1,30 +1,41 @@
-# XS12 Visuals — CMS
+# XS12 Visuals — CMS con Pages CMS
 
-## Instalación
+Esta versión utiliza Pages CMS, pensado para editar repositorios de GitHub sin tener que programar.
 
-1. Sube el contenido de esta carpeta a tu repositorio de GitHub.
-2. Abre `admin/config.yml`.
-3. Sustituye `OWNER/REPOSITORY` por tu repositorio, por ejemplo `xiansilva/xs12visuals.github.io`.
-4. En GitHub: **Settings → Pages → Deploy from branch → main → /(root)**.
-5. Cuando esté publicada, entra en `https://TUUSUARIO.github.io/admin/`.
-6. Autoriza el acceso a GitHub.
+## Primer acceso
 
-## Qué podrás editar sin código
+1. Abre Pages CMS desde https://pagescms.org/
+2. Entra con GitHub.
+3. Selecciona el repositorio `XS12Visuals/xs12visuals.github.io`.
+4. Pages CMS leerá `.pages.yml` y mostrará los apartados configurados.
 
-- textos de inicio
-- textos en ES / Gal / ENG
-- biografía
-- fotografías e imágenes
+## Qué puedes editar
+
+- portada y textos
+- español / gallego / inglés
+- fotografías
+- imágenes
 - categorías
-- orden manual
-- fotografías destacadas
+- orden
 - artículos científicos
 - novedades
-- fechas
-- publicaciones
+- biografía
 - Instagram y correo
 
-Las imágenes web se guardan en `media/`. Conserva RAW/TIFF/PSD fuera de GitHub como archivo maestro.
+Los cambios se guardan en GitHub. GitHub Pages volverá a publicar la web automáticamente.
 
-### Importante
-El CMS controla el **contenido** y su organización dentro de las secciones. El diseño visual general sigue estando definido por la web. Para un editor de páginas totalmente libre, de arrastrar y soltar cada elemento, habría que cambiar a otro tipo de plataforma.
+IMPORTANTE: esta versión sustituye Sveltia CMS porque el flujo anterior estaba intentando utilizar una autenticación de Netlify que no estaba configurada para este sitio.
+
+
+## Estructura de páginas
+
+La portada es un resumen. Los apartados completos tienen URLs independientes:
+
+- `/proyecto/`
+- `/portfolio/`
+- `/ciencia/`
+- `/novedades/`
+- `/sobre-mi/`
+- `/contacto/`
+
+GitHub Pages no permite crear URLs como `proyecto.github.io` dentro del mismo sitio sin crear otros sitios/dominios; por eso se usa esta estructura, que queda como `https://xs12visuals.github.io/proyecto/`, etc.

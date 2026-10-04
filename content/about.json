@@ -1,9 +1,18 @@
 {
-  "title_es": "Sobre mí",
-  "title_gl": "Sobre min",
-  "title_en": "About me",
-  "text_es": "",
-  "text_gl": "",
-  "text_en": "",
-  "photo": ""
+  "photo": "",
+  "title": {
+    "es": "La persona detrás de XS12 Visuals.",
+    "gl": "A persoa detrás de XS12 Visuals.",
+    "en": "The person behind XS12 Visuals."
+  },
+  "text_a": {
+    "es": "Soy fotógrafo y estudiante de Biología. Estas dos perspectivas forman parte de la identidad del proyecto y de mi manera de acercarme a la naturaleza.",
+    "gl": "Son fotógrafo e estudante de Bioloxía. Estas dúas perspectivas forman parte da identidade do proxecto e da miña maneira de achegarme á natureza.",
+    "en": "I am a photographer and Biology student. These two perspectives are part of the identity of the project and of the way I approach nature."
+  },
+  "text_b": {
+    "es": "XS12 Visuals es también un espacio para desarrollar una mirada propia, aprender continuamente y compartir lo que descubro a través de imágenes y palabras.",
+    "gl": "XS12 Visuals é tamén un espazo para desenvolver unha mirada propia, aprender continuamente e compartir o que descubro a través de imaxes e palabras.",
+    "en": "XS12 Visuals is also a space to develop a personal perspective, keep learning and share what I discover through images and words."
+  }
 }

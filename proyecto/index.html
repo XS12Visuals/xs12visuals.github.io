@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>El proyecto — XS12 Visuals</title><link rel="stylesheet" href="../styles.css"></head><body>
+<header><div class="bar">
+<a href="../" class="brand"><img src="../logo.svg" alt="XS12 Visuals"></a>
+<nav id="nav">
+<a href="../" data-i18n="nav.home">Inicio</a>
+<div class="dropdown"><button data-i18n="nav.portfolio">Portfolio ▾</button>
+<div class="menu"><a href="../portfolio/">Naturaleza</a><a href="../portfolio/">Fauna</a><a href="../portfolio/">Flora & macro</a><a href="../portfolio/">Paisaje</a></div></div>
+<a href="../proyecto/" data-i18n="nav.project">El proyecto</a>
+<a href="../ciencia/" data-i18n="nav.science">Ciencia</a>
+<a href="../novedades/" data-i18n="nav.news">Novedades</a>
+<a href="../sobre-mi/" data-i18n="nav.about">Sobre mí</a>
+<a href="../contacto/" data-i18n="nav.contact">Contacto</a>
+</nav>
+<div class="langs" aria-label="Seleccionar idioma">
+<button class="active" data-lang="es" aria-label="Español"><svg class="flag" viewBox="0 0 30 20"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg><b>ES</b></button>
+<button data-lang="gl" aria-label="Galego"><svg class="flag" viewBox="0 0 30 20"><rect width="30" height="20" fill="#fff"/><path d="M-3 4 L33 16" stroke="#75BDE8" stroke-width="4"/></svg><b>Gal</b></button>
+<button data-lang="en" aria-label="English"><svg class="flag" viewBox="0 0 60 40"><rect width="60" height="40" fill="#012169"/><path d="M0 0L60 40M60 0L0 40" stroke="#fff" stroke-width="8"/><path d="M0 0L60 40M60 0L0 40" stroke="#C8102E" stroke-width="4"/><path d="M30 0V40M0 20H60" stroke="#fff" stroke-width="12"/><path d="M30 0V40M0 20H60" stroke="#C8102E" stroke-width="7"/></svg><b>ENG</b></button>
+</div>
+<button class="hamb" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
+</div></header>
+<main>
+<section class="section page-hero"><p class="eyebrow" data-i18n="project.eyebrow">EL PROYECTO</p>
+<h1 data-cms="project_title">Mucho más que una colección de fotografías.</h1>
+<div class="cols"><p data-cms="project_a"></p><p data-cms="project_b"></p></div>
+<div class="panel" style="margin-top:42px"><h3>XS12 Visuals</h3><p>Este espacio reúne fotografía, Biología, divulgación, publicaciones y una mirada personal sobre el mundo natural.</p></div>
+</section></main>
+<footer><div class="footer-main"><img src="../logo.svg" alt="XS12 Visuals" class="footer-logo">
+<div class="footer-icons"><a class="footer-icon" id="instagramLink" href="#" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5"></rect><circle cx="12" cy="12" r="4.1"></circle><circle cx="17.4" cy="6.7" r="1"></circle></svg></a>
+<a class="footer-icon" id="emailLink" href="#" target="_blank" rel="noopener" aria-label="Enviar correo electrónico"><svg viewBox="0 0 24 24"><rect x="3" y="5.2" width="18" height="13.6" rx="1.2"></rect><path d="M3.5 6.2 12 13l8.5-6.8"></path></svg></a></div>
+<small id="copyright">© 2026 XS12 Visuals</small></div></footer>
+
+<script>
+let DATA={settings:{},home:{},about:{},i18n:{},portfolio:[],articles:[],news:[]};
+let lang=localStorage.getItem("xs12-lang")||"es";
+const $=s=>document.querySelector(s);
+const txt=obj=>obj?.[lang] ?? obj?.es ?? "";
+function imgUrl(v){if(!v)return "";return v.startsWith("/")||v.startsWith("http")?v:"../"+v.replace(/^\.?\//,"");}
+function applyI18n(){
+ document.querySelectorAll("[data-i18n]").forEach(e=>{const v=DATA.i18n[e.dataset.i18n];if(v)e.textContent=txt(v)});
+ document.querySelectorAll("[data-ph]").forEach(e=>{const v=DATA.i18n[e.dataset.ph];if(v)e.placeholder=txt(v)});
+ document.documentElement.lang=lang;
+ document.querySelectorAll(".langs button").forEach(b=>b.classList.toggle("active",b.dataset.lang===lang));
+ const copyright=document.querySelector("#copyright");
+ if(copyright&&DATA.i18n["footer.copy"])copyright.textContent=txt(DATA.i18n["footer.copy"]).replace("{year}",new Date().getFullYear());
+}
+async function load(){
+ const files=["settings.json","home.json","about.json","i18n.json","portfolio.json","articles.json","news.json"];
+ const vals=await Promise.all(files.map(f=>fetch("../content/"+f+"?v="+Date.now()).then(r=>r.json())));
+ [DATA.settings,DATA.home,DATA.about,DATA.i18n,DATA.portfolio,DATA.articles,DATA.news]=vals;
+ applyI18n();
+ const form=document.querySelector("#contactForm");
+ if(form)form.action=DATA.settings.form_action||"https://formsubmit.co/"+encodeURIComponent(DATA.settings.email||"");
+ const email=document.querySelector("#directEmail");
+ if(email){email.href=DATA.settings.direct_email_url||("mailto:"+DATA.settings.email);email.textContent=DATA.settings.email||"";}
+ const ig=document.querySelector("#instagramLink"); if(ig)ig.href=DATA.settings.instagram||"#";
+ const em=document.querySelector("#emailLink"); if(em)em.href=DATA.settings.direct_email_url||("mailto:"+DATA.settings.email);
+}
+document.querySelectorAll(".langs button").forEach(b=>b.addEventListener("click",()=>{lang=b.dataset.lang;localStorage.setItem("xs12-lang",lang);applyI18n();}));
+document.querySelector(".hamb")?.addEventListener("click",()=>document.getElementById("nav").classList.toggle("open"));
+load().catch(e=>console.error("XS12:",e));
+</script>
+</body></html>
