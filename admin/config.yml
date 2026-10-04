@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: OWNER/REPOSITORY
+  repo: XS12Visuals/xs12visuals.github.io
   branch: main
 
 media_folder: "media"
