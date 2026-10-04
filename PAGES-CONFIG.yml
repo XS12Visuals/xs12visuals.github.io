@@ -1,0 +1,264 @@
+media:
+  input: media
+  output: /media
+
+content:
+  - name: settings
+    label: Ajustes generales
+    type: file
+    path: content/settings.json
+    fields:
+      - name: site_title
+        label: Nombre de la web
+        type: string
+      - name: instagram
+        label: Instagram
+        type: string
+      - name: email
+        label: Correo electrónico
+        type: string
+      - name: form_action
+        label: Dirección del formulario
+        type: string
+      - name: direct_email_url
+        label: Enlace directo de correo
+        type: string
+
+  - name: home
+    label: Página de inicio
+    type: file
+    path: content/home.json
+    fields:
+      - name: hero_image
+        label: Imagen principal
+        type: image
+      - name: hero_eyebrow
+        label: Texto pequeño del inicio
+        type: object
+        fields:
+          - {name: es, label: Español, type: string}
+          - {name: gl, label: Gallego, type: string}
+          - {name: en, label: Inglés, type: string}
+      - name: hero_title
+        label: Título principal
+        type: object
+        fields:
+          - {name: es, label: Español, type: string}
+          - {name: gl, label: Gallego, type: string}
+          - {name: en, label: Inglés, type: string}
+      - name: hero_lead
+        label: Texto principal
+        type: object
+        fields:
+          - {name: es, label: Español, type: text}
+          - {name: gl, label: Gallego, type: text}
+          - {name: en, label: Inglés, type: text}
+      - name: project_title
+        label: Título del proyecto
+        type: object
+        fields:
+          - {name: es, label: Español, type: string}
+          - {name: gl, label: Gallego, type: string}
+          - {name: en, label: Inglés, type: string}
+      - name: project_a
+        label: Texto proyecto 1
+        type: object
+        fields:
+          - {name: es, label: Español, type: text}
+          - {name: gl, label: Gallego, type: text}
+          - {name: en, label: Inglés, type: text}
+      - name: project_b
+        label: Texto proyecto 2
+        type: object
+        fields:
+          - {name: es, label: Español, type: text}
+          - {name: gl, label: Gallego, type: text}
+          - {name: en, label: Inglés, type: text}
+
+  - name: about
+    label: Sobre mí
+    type: file
+    path: content/about.json
+    fields:
+      - name: photo
+        label: Fotografía
+        type: image
+      - name: title
+        label: Título
+        type: object
+        fields:
+          - {name: es, label: Español, type: string}
+          - {name: gl, label: Gallego, type: string}
+          - {name: en, label: Inglés, type: string}
+      - name: text_a
+        label: Texto 1
+        type: object
+        fields:
+          - {name: es, label: Español, type: text}
+          - {name: gl, label: Gallego, type: text}
+          - {name: en, label: Inglés, type: text}
+      - name: text_b
+        label: Texto 2
+        type: object
+        fields:
+          - {name: es, label: Español, type: text}
+          - {name: gl, label: Gallego, type: text}
+          - {name: en, label: Inglés, type: text}
+
+  - name: portfolio
+    label: Portfolio / Fotografías
+    type: file
+    path: content/portfolio.json
+    fields:
+      - name: items
+        label: Fotografías
+        type: list
+        fields:
+          - name: title
+            label: Título
+            type: object
+            fields:
+              - {name: es, label: Español, type: string}
+              - {name: gl, label: Gallego, type: string}
+              - {name: en, label: Inglés, type: string}
+          - name: description
+            label: Descripción
+            type: object
+            fields:
+              - {name: es, label: Español, type: text}
+              - {name: gl, label: Gallego, type: text}
+              - {name: en, label: Inglés, type: text}
+          - name: image
+            label: Fotografía
+            type: image
+          - name: category
+            label: Categoría
+            type: select
+            options:
+              - Naturaleza
+              - Fauna
+              - Flora y macro
+              - Paisajes
+              - Otros
+          - name: order
+            label: Orden
+            type: number
+          - name: featured
+            label: Mostrar en portada
+            type: boolean
+          - name: published
+            label: Publicado
+            type: boolean
+
+  - name: articles
+    label: Ciencia / Artículos
+    type: file
+    path: content/articles.json
+    fields:
+      - name: items
+        label: Artículos
+        type: list
+        fields:
+          - name: title
+            label: Título
+            type: object
+            fields:
+              - {name: es, label: Español, type: string}
+              - {name: gl, label: Gallego, type: string}
+              - {name: en, label: Inglés, type: string}
+          - name: body
+            label: Contenido
+            type: object
+            fields:
+              - {name: es, label: Español, type: rich-text}
+              - {name: gl, label: Gallego, type: rich-text}
+              - {name: en, label: Inglés, type: rich-text}
+          - name: excerpt
+            label: Resumen
+            type: object
+            fields:
+              - {name: es, label: Español, type: text}
+              - {name: gl, label: Gallego, type: text}
+              - {name: en, label: Inglés, type: text}
+          - name: image
+            label: Imagen
+            type: image
+          - name: date
+            label: Fecha
+            type: date
+          - name: order
+            label: Orden
+            type: number
+          - name: published
+            label: Publicado
+            type: boolean
+
+  - name: news
+    label: Novedades
+    type: file
+    path: content/news.json
+    fields:
+      - name: items
+        label: Novedades
+        type: list
+        fields:
+          - name: title
+            label: Título
+            type: object
+            fields:
+              - {name: es, label: Español, type: string}
+              - {name: gl, label: Gallego, type: string}
+              - {name: en, label: Inglés, type: string}
+          - name: body
+            label: Contenido
+            type: object
+            fields:
+              - {name: es, label: Español, type: rich-text}
+              - {name: gl, label: Gallego, type: rich-text}
+              - {name: en, label: Inglés, type: rich-text}
+          - name: excerpt
+            label: Resumen
+            type: object
+            fields:
+              - {name: es, label: Español, type: text}
+              - {name: gl, label: Gallego, type: text}
+              - {name: en, label: Inglés, type: text}
+          - name: image
+            label: Imagen
+            type: image
+          - name: date
+            label: Fecha
+            type: date
+          - name: order
+            label: Orden
+            type: number
+          - name: published
+            label: Publicado
+            type: boolean
+
+  - name: translations
+    label: Textos de la interfaz
+    type: file
+    path: content/i18n.json
+    fields:
+      - name: nav.home
+        label: Inicio
+        type: object
+      - name: nav.portfolio
+        label: Portfolio
+        type: object
+      - name: nav.project
+        label: El proyecto
+        type: object
+      - name: nav.science
+        label: Ciencia
+        type: object
+      - name: nav.news
+        label: Novedades
+        type: object
+      - name: nav.about
+        label: Sobre mí
+        type: object
+      - name: nav.contact
+        label: Contacto
+        type: object
