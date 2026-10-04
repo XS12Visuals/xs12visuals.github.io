@@ -18,7 +18,7 @@
 <button data-lang="gl" aria-label="Galego"><svg class="flag" viewBox="0 0 30 20"><rect width="30" height="20" fill="#fff"/><path d="M-3 4 L33 16" stroke="#75BDE8" stroke-width="4"/></svg><b>Gal</b></button>
 <button data-lang="en" aria-label="English"><svg class="flag" viewBox="0 0 60 40"><rect width="60" height="40" fill="#012169"/><path d="M0 0L60 40M60 0L0 40" stroke="#fff" stroke-width="8"/><path d="M0 0L60 40M60 0L0 40" stroke="#C8102E" stroke-width="4"/><path d="M30 0V40M0 20H60" stroke="#fff" stroke-width="12"/><path d="M30 0V40M0 20H60" stroke="#C8102E" stroke-width="7"/></svg><b>ENG</b></button>
 </div>
-<button class="hamb" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
+<button class="hamb" type="button" aria-label="Abrir menú" aria-expanded="false">☰</button>
 </div></header>
 <main>
 <section class="section page-hero contact"><p class="eyebrow" data-i18n="contact.eyebrow">CONTACTO</p>
@@ -64,7 +64,32 @@ async function load(){
  const em=document.querySelector("#emailLink"); if(em)em.href=DATA.settings.direct_email_url||("mailto:"+DATA.settings.email);
 }
 document.querySelectorAll(".langs button").forEach(b=>b.addEventListener("click",()=>{lang=b.dataset.lang;localStorage.setItem("xs12-lang",lang);applyI18n();}));
-document.querySelector(".hamb")?.addEventListener("click",()=>document.getElementById("nav").classList.toggle("open"));
 load().catch(e=>console.error("XS12:",e));
+</script>
+
+<script>
+(function(){
+  const nav=document.getElementById('nav');
+  const hamb=document.querySelector('.hamb');
+  if(hamb && nav){
+    hamb.addEventListener('click', function(){
+      const open=nav.classList.toggle('open');
+      hamb.setAttribute('aria-expanded', String(open));
+    });
+  }
+  document.querySelectorAll('.dropdown > button').forEach(function(btn){
+    btn.type='button';
+    btn.addEventListener('click', function(e){
+      e.preventDefault();
+      const d=btn.closest('.dropdown');
+      const wasOpen=d.classList.contains('open');
+      document.querySelectorAll('.dropdown.open').forEach(x=>x.classList.remove('open'));
+      if(!wasOpen) d.classList.add('open');
+    });
+  });
+  document.addEventListener('click', function(e){
+    if(!e.target.closest('.dropdown')) document.querySelectorAll('.dropdown.open').forEach(x=>x.classList.remove('open'));
+  });
+})();
 </script>
 </body></html>

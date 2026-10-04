@@ -2,9 +2,9 @@
 <html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>XS12 Visuals</title><link rel="stylesheet" href="styles.css"></head><body>
 <header><div class="bar">
-<a href="./ class="brand"><img src="logo.svg" alt="XS12 Visuals"></a>
+<a href="./" class="brand"><img src="logo.svg" alt="XS12 Visuals"></a>
 <nav id="nav">
-<a href="./ data-i18n="nav.home">Inicio</a>
+<a href="./" data-i18n="nav.home">Inicio</a>
 <div class="dropdown"><button data-i18n="nav.portfolio">Portfolio ▾</button>
 <div class="menu"><a href="portfolio/">Naturaleza</a><a href="portfolio/">Fauna</a><a href="portfolio/">Flora & macro</a><a href="portfolio/">Paisaje</a></div></div>
 <a href="proyecto/" data-i18n="nav.project">El proyecto</a>
@@ -18,7 +18,7 @@
 <button data-lang="gl" aria-label="Galego"><svg class="flag" viewBox="0 0 30 20"><rect width="30" height="20" fill="#fff"/><path d="M-3 4 L33 16" stroke="#75BDE8" stroke-width="4"/></svg><b>Gal</b></button>
 <button data-lang="en" aria-label="English"><svg class="flag" viewBox="0 0 60 40"><rect width="60" height="40" fill="#012169"/><path d="M0 0L60 40M60 0L0 40" stroke="#fff" stroke-width="8"/><path d="M0 0L60 40M60 0L0 40" stroke="#C8102E" stroke-width="4"/><path d="M30 0V40M0 20H60" stroke="#fff" stroke-width="12"/><path d="M30 0V40M0 20H60" stroke="#C8102E" stroke-width="7"/></svg><b>ENG</b></button>
 </div>
-<button class="hamb" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
+<button class="hamb" type="button" aria-label="Abrir menú" aria-expanded="false">☰</button>
 </div></header>
 <main>
 <section id="inicio" class="hero"><div>
@@ -62,7 +62,32 @@ function renderNews(){const g=$("#newsGrid");if(!g)return;const a=(DATA.news||[]
 function apply(){document.querySelectorAll("[data-i18n]").forEach(e=>{let v=DATA.i18n[e.dataset.i18n];if(v)e.textContent=txt(v)});document.documentElement.lang=lang;document.querySelectorAll(".langs button").forEach(b=>b.classList.toggle("active",b.dataset.lang===lang));const h=DATA.home,a=DATA.about;document.querySelector('[data-cms="hero_title"]').textContent=txt(h.hero_title);document.querySelector('[data-cms="hero_lead"]').textContent=txt(h.hero_lead);document.querySelector('[data-cms="project_title"]').textContent=txt(h.project_title);document.querySelector('[data-cms="project_a"]').textContent=txt(h.project_a);document.querySelector('[data-cms="project_b"]').textContent=txt(h.project_b);document.querySelector('[data-cms="about_title"]').textContent=txt(a.title);document.querySelector('[data-cms="about_a"]').textContent=txt(a.text_a);document.querySelector('[data-cms="about_b"]').textContent=txt(a.text_b);renderPortfolio();renderNews();document.querySelector("#copyright")?.replaceChildren(document.createTextNode((txt(DATA.i18n["footer.copy"])||"© 2026 XS12 Visuals").replace("{year}",new Date().getFullYear())));}
 async function load(){const f=["settings.json","home.json","about.json","i18n.json","portfolio.json","articles.json","news.json"];const v=await Promise.all(f.map(x=>fetch("content/"+x+"?v="+Date.now()).then(r=>r.json())));[DATA.settings,DATA.home,DATA.about,DATA.i18n,DATA.portfolio,DATA.articles,DATA.news]=v;apply();}
 document.querySelectorAll(".langs button").forEach(b=>b.addEventListener("click",()=>{lang=b.dataset.lang;localStorage.setItem("xs12-lang",lang);apply();}));
-document.querySelector(".hamb")?.addEventListener("click",()=>document.getElementById("nav").classList.toggle("open"));
 load();
+</script>
+
+<script>
+(function(){
+  const nav=document.getElementById('nav');
+  const hamb=document.querySelector('.hamb');
+  if(hamb && nav){
+    hamb.addEventListener('click', function(){
+      const open=nav.classList.toggle('open');
+      hamb.setAttribute('aria-expanded', String(open));
+    });
+  }
+  document.querySelectorAll('.dropdown > button').forEach(function(btn){
+    btn.type='button';
+    btn.addEventListener('click', function(e){
+      e.preventDefault();
+      const d=btn.closest('.dropdown');
+      const wasOpen=d.classList.contains('open');
+      document.querySelectorAll('.dropdown.open').forEach(x=>x.classList.remove('open'));
+      if(!wasOpen) d.classList.add('open');
+    });
+  });
+  document.addEventListener('click', function(e){
+    if(!e.target.closest('.dropdown')) document.querySelectorAll('.dropdown.open').forEach(x=>x.classList.remove('open'));
+  });
+})();
 </script>
 </body></html>
