@@ -1,0 +1,127 @@
+backend:
+  name: github
+  repo: OWNER/REPOSITORY
+  branch: main
+
+media_folder: "media"
+public_folder: "/media"
+locale: "es"
+
+collections:
+  - name: settings
+    label: "Ajustes generales"
+    files:
+      - name: settings
+        label: "Web y contacto"
+        file: "content/settings.json"
+        fields:
+          - {label: "Nombre de la web", name: site_title, widget: string}
+          - {label: "Instagram", name: instagram, widget: string}
+          - {label: "Correo electrónico", name: email, widget: string}
+
+  - name: home
+    label: "Página de inicio"
+    files:
+      - name: home
+        label: "Inicio"
+        file: "content/home.json"
+        fields:
+          - {label: "Título ES", name: hero_title_es, widget: string}
+          - {label: "Título Gal", name: hero_title_gl, widget: string}
+          - {label: "Título ENG", name: hero_title_en, widget: string}
+          - {label: "Texto ES", name: hero_text_es, widget: text}
+          - {label: "Texto Gal", name: hero_text_gl, widget: text}
+          - {label: "Texto ENG", name: hero_text_en, widget: text}
+          - {label: "Imagen principal", name: hero_image, widget: image, required: false}
+          - {label: "Título proyecto ES", name: project_title_es, widget: string}
+          - {label: "Título proyecto Gal", name: project_title_gl, widget: string}
+          - {label: "Título proyecto ENG", name: project_title_en, widget: string}
+          - {label: "Texto proyecto ES", name: project_text_es, widget: text, required: false}
+          - {label: "Texto proyecto Gal", name: project_text_gl, widget: text, required: false}
+          - {label: "Texto proyecto ENG", name: project_text_en, widget: text, required: false}
+
+  - name: about
+    label: "Sobre mí"
+    files:
+      - name: about
+        label: "Biografía"
+        file: "content/about.json"
+        fields:
+          - {label: "Título ES", name: title_es, widget: string}
+          - {label: "Título Gal", name: title_gl, widget: string}
+          - {label: "Título ENG", name: title_en, widget: string}
+          - {label: "Texto ES", name: text_es, widget: markdown}
+          - {label: "Texto Gal", name: text_gl, widget: markdown}
+          - {label: "Texto ENG", name: text_en, widget: markdown}
+          - {label: "Fotografía", name: photo, widget: image, required: false}
+
+  - name: portfolio
+    label: "Portfolio / Fotografías"
+    files:
+      - name: portfolio
+        label: "Fotografías"
+        file: "content/collections/portfolio.json"
+        fields:
+          - label: "Fotografías"
+            name: items
+            widget: list
+            summary: "{{fields.order}} · {{fields.title_es}}"
+            fields:
+              - {label: "Título ES", name: title_es, widget: string}
+              - {label: "Título Gal", name: title_gl, widget: string}
+              - {label: "Título ENG", name: title_en, widget: string}
+              - {label: "Descripción ES", name: description_es, widget: text, required: false}
+              - {label: "Descripción Gal", name: description_gl, widget: text, required: false}
+              - {label: "Descripción ENG", name: description_en, widget: text, required: false}
+              - {label: "Fotografía", name: image, widget: image}
+              - {label: "Categoría", name: category, widget: select, options: ["Naturaleza","Fauna","Flora y macro","Paisajes","Otros"]}
+              - {label: "Orden", name: order, widget: number, value_type: int, default: 10}
+              - {label: "Mostrar en portada", name: featured, widget: boolean, default: false}
+              - {label: "Publicado", name: published, widget: boolean, default: true}
+
+  - name: articles
+    label: "Ciencia / Artículos"
+    files:
+      - name: articles
+        label: "Artículos"
+        file: "content/collections/articles.json"
+        fields:
+          - label: "Artículos"
+            name: items
+            widget: list
+            summary: "{{fields.date}} · {{fields.title_es}}"
+            fields:
+              - {label: "Título ES", name: title_es, widget: string}
+              - {label: "Título Gal", name: title_gl, widget: string}
+              - {label: "Título ENG", name: title_en, widget: string}
+              - {label: "Contenido ES", name: body_es, widget: markdown}
+              - {label: "Contenido Gal", name: body_gl, widget: markdown}
+              - {label: "Contenido ENG", name: body_en, widget: markdown}
+              - {label: "Imagen", name: image, widget: image, required: false}
+              - {label: "Fecha", name: date, widget: datetime}
+              - {label: "Orden", name: order, widget: number, value_type: int, default: 10}
+              - {label: "Destacado", name: featured, widget: boolean, default: false}
+              - {label: "Publicado", name: published, widget: boolean, default: true}
+
+  - name: news
+    label: "Novedades"
+    files:
+      - name: news
+        label: "Publicaciones y novedades"
+        file: "content/collections/news.json"
+        fields:
+          - label: "Novedades"
+            name: items
+            widget: list
+            summary: "{{fields.date}} · {{fields.title_es}}"
+            fields:
+              - {label: "Título ES", name: title_es, widget: string}
+              - {label: "Título Gal", name: title_gl, widget: string}
+              - {label: "Título ENG", name: title_en, widget: string}
+              - {label: "Texto ES", name: body_es, widget: markdown}
+              - {label: "Texto Gal", name: body_gl, widget: markdown}
+              - {label: "Texto ENG", name: body_en, widget: markdown}
+              - {label: "Imagen", name: image, widget: image, required: false}
+              - {label: "Fecha", name: date, widget: datetime}
+              - {label: "Orden", name: order, widget: number, value_type: int, default: 10}
+              - {label: "Publicado", name: published, widget: boolean, default: true}

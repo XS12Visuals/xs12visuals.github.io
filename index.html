@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>XS12 Visuals</title><link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+<div class="bar">
+<a href="#inicio" class="brand"><img src="logo.svg" alt="XS12 Visuals"></a>
+<nav id="nav">
+<a href="#inicio" data-i18n="nav.home">Inicio</a>
+<div class="dropdown"><button data-i18n="nav.portfolio">Portfolio ▾</button><div class="menu"><a href="#portfolio" data-i18n="portfolio.nature">Naturaleza</a><a href="#portfolio" data-i18n="portfolio.fauna">Fauna</a><a href="#portfolio" data-i18n="portfolio.flora">Flora & macro</a><a href="#portfolio" data-i18n="portfolio.landscape">Paisaje</a></div></div>
+<a href="#proyecto" data-i18n="nav.project">El proyecto</a><a href="#ciencia" data-i18n="nav.science">Ciencia</a><a href="#novedades" data-i18n="nav.news">Novedades</a><a href="#sobre-mi" data-i18n="nav.about">Sobre mí</a><a href="#contacto" data-i18n="nav.contact">Contacto</a>
+</nav>
+<div class="langs" aria-label="Seleccionar idioma">
+<button class="active" data-lang="es" aria-label="Español"><svg class="flag" viewBox="0 0 30 20" aria-hidden="true"><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg><b>ES</b></button>
+<button data-lang="gl" aria-label="Galego"><svg class="flag" viewBox="0 0 30 20" aria-hidden="true"><rect width="30" height="20" fill="#fff"/><path d="M-3 16 L33 4" stroke="#75BDE8" stroke-width="4"/></svg><b>Gal</b></button>
+<button data-lang="en" aria-label="English"><svg class="flag" viewBox="0 0 60 40" aria-hidden="true"><rect width="60" height="40" fill="#012169"/><path d="M0 0L60 40M60 0L0 40" stroke="#fff" stroke-width="8"/><path d="M0 0L60 40M60 0L0 40" stroke="#C8102E" stroke-width="4"/><path d="M30 0V40M0 20H60" stroke="#fff" stroke-width="14"/><path d="M30 0V40M0 20H60" stroke="#C8102E" stroke-width="8"/></svg><b>ENG</b></button>
+</div>
+<button class="hamb" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
+</div>
+</header>
+
+<main>
+<section id="inicio" class="hero"><div>
+<img src="logo.svg" alt="XS12 Visuals" class="hero-logo">
+<p class="eyebrow" data-i18n="hero.eyebrow">XS12 VISUALS</p><h1 data-i18n="hero.title">Una mirada al mundo natural.</h1>
+<p class="lead" data-i18n="hero.lead">Fotografía, Biología, divulgación y una forma personal de observar, documentar y compartir el mundo que nos rodea.</p>
+<a class="btn" href="#proyecto" data-i18n="hero.project">Conoce el proyecto</a>
+<a class="btn outline" href="#portfolio" data-i18n="hero.portfolio">Ir a ver el portfolio</a>
+</div></section>
+
+<section id="proyecto" class="section"><p class="eyebrow" data-i18n="project.eyebrow">EL PROYECTO</p><h2 data-i18n="project.title">Mucho más que una colección de fotografías.</h2>
+<div class="cols"><p data-i18n="project.a">XS12 Visuals nace como un espacio personal para unir la fotografía y mi interés por el mundo natural. Es un lugar para observar, aprender, documentar y contar historias.</p><p data-i18n="project.b">La imagen es una herramienta, pero el proyecto también incluye divulgación científica, reflexiones, publicaciones y todo aquello que ayude a acercar la naturaleza y la ciencia a más personas.</p></div></section>
+
+<section id="portfolio" class="section alt"><p class="eyebrow" data-i18n="portfolio.eyebrow">PORTFOLIO</p><h2 data-i18n="portfolio.title">La naturaleza, a través de mi cámara.</h2><p data-i18n="portfolio.lead">Una parte del proyecto dedicada a la imagen.</p>
+<div class="grid"><article><div class="ph"></div><h3 data-i18n="portfolio.nature">Naturaleza</h3><p data-i18n="portfolio.natureText">Entornos y detalles del mundo natural.</p></article><article><div class="ph"></div><h3 data-i18n="portfolio.fauna">Fauna</h3><p data-i18n="portfolio.faunaText">Animales y encuentros en el campo.</p></article><article><div class="ph"></div><h3 data-i18n="portfolio.flora">Flora & macro</h3><p data-i18n="portfolio.floraText">Pequeños mundos que pasan desapercibidos.</p></article><article><div class="ph"></div><h3 data-i18n="portfolio.landscape">Paisaje</h3><p data-i18n="portfolio.landscapeText">Lugares, atmósferas y territorio.</p></article></div></section>
+
+<section id="ciencia" class="section blue"><p class="eyebrow" data-i18n="science.eyebrow">DIVULGACIÓN</p><h2 data-i18n="science.title">Ciencia para entender, no solo para leer.</h2><div class="panel"><h3 data-i18n="science.heading">Biología explicada de forma cercana</h3><p data-i18n="science.text">Artículos y recursos para acercar conceptos de Biología y naturaleza a personas que no tienen por qué ser especialistas.</p></div></section>
+
+<section id="novedades" class="section"><p class="eyebrow" data-i18n="news.eyebrow">NOVEDADES</p><h2 data-i18n="news.title">Lo que está pasando en XS12 Visuals.</h2><div class="news"><article><b>01</b><h3 data-i18n="news.one.title">Nuevas fotografías</h3><p data-i18n="news.one.text">Nuevas series y proyectos fotográficos.</p></article><article><b>02</b><h3 data-i18n="news.two.title">Divulgación</h3><p data-i18n="news.two.text">Contenido relacionado con Biología y naturaleza.</p></article><article><b>03</b><h3 data-i18n="news.three.title">Proyectos</h3><p data-i18n="news.three.text">Colaboraciones, publicaciones y nuevos proyectos.</p></article></div></section>
+
+<section id="sobre-mi" class="section alt"><p class="eyebrow" data-i18n="about.eyebrow">SOBRE MÍ</p><h2 data-i18n="about.title">La persona detrás de XS12 Visuals.</h2><div class="cols"><p data-i18n="about.a">Soy fotógrafo y estudiante de Biología. Estas dos perspectivas forman parte de la identidad del proyecto y de mi manera de acercarme a la naturaleza.</p><p data-i18n="about.b">XS12 Visuals es también un espacio para desarrollar una mirada propia, aprender continuamente y compartir lo que descubro a través de imágenes y palabras.</p></div></section>
+
+<section id="contacto" class="section contact">
+<p class="eyebrow" data-i18n="contact.eyebrow">CONTACTO</p><h2 data-i18n="contact.title">Hablemos.</h2>
+<p data-i18n="contact.intro">Para colaboraciones, proyectos, consultas o simplemente para ponerte en contacto conmigo.</p>
+<form class="contact-form" action="https://formsubmit.co/xiansilva.public@gmail.com" method="POST">
+<input type="hidden" name="_subject" value="Nuevo contacto desde XS12 Visuals">
+<input type="hidden" name="_captcha" value="true">
+<input type="hidden" name="_template" value="table">
+<div class="form-row">
+<label><span data-i18n="form.name">Nombre</span><input type="text" name="name" required placeholder="Tu nombre" data-ph="form.namePh"></label>
+<label><span data-i18n="form.email">Correo electrónico</span><input type="email" name="email" required placeholder="tu@email.com" data-ph="form.emailPh"></label>
+</div>
+<label><span data-i18n="form.subject">Asunto</span><input type="text" name="subject" required placeholder="¿En qué puedo ayudarte?" data-ph="form.subjectPh"></label>
+<label><span data-i18n="form.message">Mensaje</span><textarea name="message" rows="7" required placeholder="Escribe aquí tu mensaje..." data-ph="form.messagePh"></textarea></label>
+<button class="form-submit" type="submit" data-i18n="form.submit">Enviar mensaje</button>
+<p class="form-note"><span data-i18n="form.direct">También puedes escribirme directamente en </span><a href="https://mail.google.com/mail/?view=cm&fs=1&to=xiansilva.public@gmail.com" target="_blank" rel="noopener">xiansilva.public@gmail.com</a>.</p>
+</form></section>
+</main>
+
+<footer><div class="footer-main">
+<img src="logo.svg" alt="XS12 Visuals" class="footer-logo">
+<div class="footer-icons">
+<a class="footer-icon" href="https://www.instagram.com/_xiansilva12x/" target="_blank" rel="noopener" aria-label="Instagram">
+<svg viewBox="0 0 24 24"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5"></rect><circle cx="12" cy="12" r="4.1"></circle><circle cx="17.4" cy="6.7" r="1"></circle></svg>
+</a>
+<a class="footer-icon" href="https://mail.google.com/mail/?view=cm&fs=1&to=xiansilva.public@gmail.com" target="_blank" rel="noopener" aria-label="Enviar correo electrónico">
+<svg viewBox="0 0 24 24"><rect x="3" y="5.2" width="18" height="13.6" rx="1.2"></rect><path d="M3.5 6.2 12 13l8.5-6.8"></path></svg>
+</a></div>
+<small>© <span id="footerYear"></span> XS12 Visuals</small>
+</div></footer>
+
+<script>document.getElementById("footerYear").textContent=new Date().getFullYear();
+const T={
+es:{
+'nav.home':'Inicio','nav.portfolio':'Portfolio ▾','nav.project':'El proyecto','nav.science':'Ciencia','nav.news':'Novedades','nav.about':'Sobre mí','nav.contact':'Contacto',
+'hero.eyebrow':'XS12 VISUALS','hero.title':'Una mirada al mundo natural.','hero.lead':'Fotografía, Biología, divulgación y una forma personal de observar, documentar y compartir el mundo que nos rodea.','hero.project':'Conoce el proyecto','hero.portfolio':'Ir a ver el portfolio',
+'project.eyebrow':'EL PROYECTO','project.title':'Mucho más que una colección de fotografías.','project.a':'XS12 Visuals nace como un espacio personal para unir la fotografía y mi interés por el mundo natural. Es un lugar para observar, aprender, documentar y contar historias.','project.b':'La imagen es una herramienta, pero el proyecto también incluye divulgación científica, reflexiones, publicaciones y todo aquello que ayude a acercar la naturaleza y la ciencia a más personas.',
+'portfolio.eyebrow':'PORTFOLIO','portfolio.title':'La naturaleza, a través de mi cámara.','portfolio.lead':'Una parte del proyecto dedicada a la imagen.','portfolio.nature':'Naturaleza','portfolio.natureText':'Entornos y detalles del mundo natural.','portfolio.fauna':'Fauna','portfolio.faunaText':'Animales y encuentros en el campo.','portfolio.flora':'Flora & macro','portfolio.floraText':'Pequeños mundos que pasan desapercibidos.','portfolio.landscape':'Paisaje','portfolio.landscapeText':'Lugares, atmósferas y territorio.',
+'science.eyebrow':'DIVULGACIÓN','science.title':'Ciencia para entender, no solo para leer.','science.heading':'Biología explicada de forma cercana','science.text':'Artículos y recursos para acercar conceptos de Biología y naturaleza a personas que no tienen por qué ser especialistas.',
+'news.eyebrow':'NOVEDADES','news.title':'Lo que está pasando en XS12 Visuals.','news.one.title':'Nuevas fotografías','news.one.text':'Nuevas series y proyectos fotográficos.','news.two.title':'Divulgación','news.two.text':'Contenido relacionado con Biología y naturaleza.','news.three.title':'Proyectos','news.three.text':'Colaboraciones, publicaciones y nuevos proyectos.',
+'about.eyebrow':'SOBRE MÍ','about.title':'La persona detrás de XS12 Visuals.','about.a':'Soy fotógrafo y estudiante de Biología. Estas dos perspectivas forman parte de la identidad del proyecto y de mi manera de acercarme a la naturaleza.','about.b':'XS12 Visuals es también un espacio para desarrollar una mirada propia, aprender continuamente y compartir lo que descubro a través de imágenes y palabras.',
+'contact.eyebrow':'CONTACTO','contact.title':'Hablemos.','contact.intro':'Para colaboraciones, proyectos, consultas o simplemente para ponerte en contacto conmigo.',
+'form.name':'Nombre','form.namePh':'Tu nombre','form.email':'Correo electrónico','form.emailPh':'tu@email.com','form.subject':'Asunto','form.subjectPh':'¿En qué puedo ayudarte?','form.message':'Mensaje','form.messagePh':'Escribe aquí tu mensaje...','form.submit':'Enviar mensaje','form.direct':'También puedes escribirme directamente en '
+},
+gl:{
+'nav.home':'Inicio','nav.portfolio':'Portfolio ▾','nav.project':'O proxecto','nav.science':'Ciencia','nav.news':'Novidades','nav.about':'Sobre min','nav.contact':'Contacto',
+'hero.eyebrow':'XS12 VISUALS','hero.title':'Unha ollada ao mundo natural.','hero.lead':'Fotografía, Bioloxía, divulgación e unha forma persoal de observar, documentar e compartir o mundo que nos rodea.','hero.project':'Coñece o proxecto','hero.portfolio':'Ir ver o portfolio',
+'project.eyebrow':'O PROXECTO','project.title':'Moito máis ca unha colección de fotografías.','project.a':'XS12 Visuals nace como un espazo persoal para unir a fotografía e o meu interese polo mundo natural. É un lugar para observar, aprender, documentar e contar historias.','project.b':'A imaxe é unha ferramenta, pero o proxecto tamén inclúe divulgación científica, reflexións, publicacións e todo aquilo que axude a achegar a natureza e a ciencia a máis persoas.',
+'portfolio.eyebrow':'PORTFOLIO','portfolio.title':'A natureza, a través da miña cámara.','portfolio.lead':'Unha parte do proxecto dedicada á imaxe.','portfolio.nature':'Natureza','portfolio.natureText':'Contornos e detalles do mundo natural.','portfolio.fauna':'Fauna','portfolio.faunaText':'Animais e encontros no campo.','portfolio.flora':'Flora & macro','portfolio.floraText':'Pequenos mundos que pasan desapercibidos.','portfolio.landscape':'Paisaxe','portfolio.landscapeText':'Lugares, atmosferas e territorio.',
+'science.eyebrow':'DIVULGACIÓN','science.title':'Ciencia para entender, non só para ler.','science.heading':'Bioloxía explicada de forma próxima','science.text':'Artigos e recursos para achegar conceptos de Bioloxía e natureza a persoas que non teñen por que ser especialistas.',
+'news.eyebrow':'NOVIDADES','news.title':'O que está pasando en XS12 Visuals.','news.one.title':'Novas fotografías','news.one.text':'Novas series e proxectos fotográficos.','news.two.title':'Divulgación','news.two.text':'Contido relacionado coa Bioloxía e a natureza.','news.three.title':'Proxectos','news.three.text':'Colaboracións, publicacións e novos proxectos.',
+'about.eyebrow':'SOBRE MIN','about.title':'A persoa detrás de XS12 Visuals.','about.a':'Son fotógrafo e estudante de Bioloxía. Estas dúas perspectivas forman parte da identidade do proxecto e da miña maneira de achegarme á natureza.','about.b':'XS12 Visuals é tamén un espazo para desenvolver unha mirada propia, aprender continuamente e compartir o que descubro a través de imaxes e palabras.',
+'contact.eyebrow':'CONTACTO','contact.title':'Falemos.','contact.intro':'Para colaboracións, proxectos, consultas ou simplemente para poñerte en contacto comigo.',
+'form.name':'Nome','form.namePh':'O teu nome','form.email':'Correo electrónico','form.emailPh':'o-teu@email.com','form.subject':'Asunto','form.subjectPh':'En que podo axudarche?','form.message':'Mensaxe','form.messagePh':'Escribe aquí a túa mensaxe...','form.submit':'Enviar mensaxe','form.direct':'Tamén podes escribirme directamente en '
+},
+en:{
+'nav.home':'Home','nav.portfolio':'Portfolio ▾','nav.project':'The project','nav.science':'Science','nav.news':'News','nav.about':'About me','nav.contact':'Contact',
+'hero.eyebrow':'XS12 VISUALS','hero.title':'A view of the natural world.','hero.lead':'Photography, Biology, science communication and a personal way of observing, documenting and sharing the world around us.','hero.project':'Discover the project','hero.portfolio':'View the portfolio',
+'project.eyebrow':'THE PROJECT','project.title':'Much more than a collection of photographs.','project.a':'XS12 Visuals is a personal space where photography meets my interest in the natural world. It is a place to observe, learn, document and tell stories.','project.b':'The image is a tool, but the project also includes science communication, reflections, publications and everything that can help bring nature and science closer to more people.',
+'portfolio.eyebrow':'PORTFOLIO','portfolio.title':'Nature, through my camera.','portfolio.lead':'A part of the project dedicated to imagery.','portfolio.nature':'Nature','portfolio.natureText':'Natural environments and details.','portfolio.fauna':'Wildlife','portfolio.faunaText':'Animals and encounters in the field.','portfolio.flora':'Flora & macro','portfolio.floraText':'Small worlds that often go unnoticed.','portfolio.landscape':'Landscape','portfolio.landscapeText':'Places, atmospheres and territory.',
+'science.eyebrow':'SCIENCE COMMUNICATION','science.title':'Science to understand, not just to read.','science.heading':'Biology explained in an approachable way','science.text':'Articles and resources that bring Biology and nature closer to people who do not need to be specialists.',
+'news.eyebrow':'NEWS','news.title':'What is happening at XS12 Visuals.','news.one.title':'New photographs','news.one.text':'New photographic series and projects.','news.two.title':'Science communication','news.two.text':'Content related to Biology and nature.','news.three.title':'Projects','news.three.text':'Collaborations, publications and new projects.',
+'about.eyebrow':'ABOUT ME','about.title':'The person behind XS12 Visuals.','about.a':'I am a photographer and Biology student. These two perspectives are part of the identity of the project and of the way I approach nature.','about.b':'XS12 Visuals is also a space to develop a personal perspective, keep learning and share what I discover through images and words.',
+'contact.eyebrow':'CONTACT','contact.title':'Let’s talk.','contact.intro':'For collaborations, projects, questions or simply to get in touch.',
+'form.name':'Name','form.namePh':'Your name','form.email':'Email address','form.emailPh':'you@email.com','form.subject':'Subject','form.subjectPh':'How can I help?','form.message':'Message','form.messagePh':'Write your message here...','form.submit':'Send message','form.direct':'You can also email me directly at '
+}};
+function applyLang(l){const d=T[l];document.querySelectorAll('[data-i18n]').forEach(e=>{const k=e.dataset.i18n;if(d[k]!==undefined)e.textContent=d[k]});document.querySelectorAll('[data-ph]').forEach(e=>{const k=e.dataset.ph;if(d[k]!==undefined)e.placeholder=d[k]});document.querySelectorAll('.langs button').forEach(x=>x.classList.toggle('active',x===document.querySelector(`[data-lang="${l}"]`)));document.documentElement.lang=l;localStorage.setItem('xs12-lang',l)}
+document.querySelectorAll('.langs button').forEach(b=>b.addEventListener('click',()=>applyLang(b.dataset.lang)));
+applyLang(localStorage.getItem('xs12-lang')||'es');
+</script>
+</body></html>
