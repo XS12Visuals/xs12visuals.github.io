@@ -1,0 +1,222 @@
+{
+  "nav.home": {
+    "es": "Inicio",
+    "gl": "Inicio",
+    "en": "Home"
+  },
+  "nav.portfolio": {
+    "es": "Portfolio ▾",
+    "gl": "Portfolio ▾",
+    "en": "Portfolio ▾"
+  },
+  "nav.project": {
+    "es": "El proyecto",
+    "gl": "O proxecto",
+    "en": "The project"
+  },
+  "nav.science": {
+    "es": "Ciencia",
+    "gl": "Ciencia",
+    "en": "Science"
+  },
+  "nav.news": {
+    "es": "Novedades",
+    "gl": "Novidades",
+    "en": "News"
+  },
+  "nav.about": {
+    "es": "Sobre mí",
+    "gl": "Sobre min",
+    "en": "About me"
+  },
+  "nav.contact": {
+    "es": "Contacto",
+    "gl": "Contacto",
+    "en": "Contact"
+  },
+  "portfolio.nature": {
+    "es": "Naturaleza",
+    "gl": "Natureza",
+    "en": "Nature"
+  },
+  "portfolio.fauna": {
+    "es": "Fauna",
+    "gl": "Fauna",
+    "en": "Wildlife"
+  },
+  "portfolio.flora": {
+    "es": "Flora & macro",
+    "gl": "Flora & macro",
+    "en": "Flora & macro"
+  },
+  "portfolio.landscape": {
+    "es": "Paisaje",
+    "gl": "Paisaxe",
+    "en": "Landscape"
+  },
+  "hero.project": {
+    "es": "Conoce el proyecto",
+    "gl": "Coñece o proxecto",
+    "en": "Discover the project"
+  },
+  "hero.portfolio": {
+    "es": "Ir a ver el portfolio",
+    "gl": "Ir ver o portfolio",
+    "en": "View the portfolio"
+  },
+  "project.eyebrow": {
+    "es": "EL PROYECTO",
+    "gl": "O PROXECTO",
+    "en": "THE PROJECT"
+  },
+  "portfolio.eyebrow": {
+    "es": "PORTFOLIO",
+    "gl": "PORTFOLIO",
+    "en": "PORTFOLIO"
+  },
+  "portfolio.title": {
+    "es": "La naturaleza, a través de mi cámara.",
+    "gl": "A natureza, a través da miña cámara.",
+    "en": "Nature, through my camera."
+  },
+  "portfolio.lead": {
+    "es": "Una parte del proyecto dedicada a la imagen.",
+    "gl": "Unha parte do proxecto dedicada á imaxe.",
+    "en": "A part of the project dedicated to imagery."
+  },
+  "science.eyebrow": {
+    "es": "DIVULGACIÓN",
+    "gl": "DIVULGACIÓN",
+    "en": "SCIENCE COMMUNICATION"
+  },
+  "science.title": {
+    "es": "Ciencia para entender, no solo para leer.",
+    "gl": "Ciencia para entender, non só para ler.",
+    "en": "Science to understand, not just to read."
+  },
+  "science.heading": {
+    "es": "Biología explicada de forma cercana",
+    "gl": "Bioloxía explicada de forma próxima",
+    "en": "Biology explained in an approachable way"
+  },
+  "science.text": {
+    "es": "Artículos y recursos para acercar conceptos de Biología y naturaleza a personas que no tienen por qué ser especialistas.",
+    "gl": "Artigos e recursos para achegar conceptos de Bioloxía e natureza a persoas que non teñen por que ser especialistas.",
+    "en": "Articles and resources that bring Biology and nature closer to people who do not need to be specialists."
+  },
+  "news.eyebrow": {
+    "es": "NOVEDADES",
+    "gl": "NOVIDADES",
+    "en": "NEWS"
+  },
+  "news.title": {
+    "es": "Lo que está pasando en XS12 Visuals.",
+    "gl": "O que está pasando en XS12 Visuals.",
+    "en": "What is happening at XS12 Visuals."
+  },
+  "about.eyebrow": {
+    "es": "SOBRE MÍ",
+    "gl": "SOBRE MIN",
+    "en": "ABOUT ME"
+  },
+  "contact.eyebrow": {
+    "es": "CONTACTO",
+    "gl": "CONTACTO",
+    "en": "CONTACT"
+  },
+  "contact.title": {
+    "es": "Hablemos.",
+    "gl": "Falemos.",
+    "en": "Let’s talk."
+  },
+  "contact.intro": {
+    "es": "Para colaboraciones, proyectos, consultas o simplemente para ponerte en contacto conmigo.",
+    "gl": "Para colaboracións, proxectos, consultas ou simplemente para poñerte en contacto comigo.",
+    "en": "For collaborations, projects, questions or simply to get in touch."
+  },
+  "form.name": {
+    "es": "Nombre",
+    "gl": "Nome",
+    "en": "Name"
+  },
+  "form.namePh": {
+    "es": "Tu nombre",
+    "gl": "O teu nome",
+    "en": "Your name"
+  },
+  "form.email": {
+    "es": "Correo electrónico",
+    "gl": "Correo electrónico",
+    "en": "Email address"
+  },
+  "form.emailPh": {
+    "es": "tu@email.com",
+    "gl": "o-teu@email.com",
+    "en": "you@email.com"
+  },
+  "form.subject": {
+    "es": "Asunto",
+    "gl": "Asunto",
+    "en": "Subject"
+  },
+  "form.subjectPh": {
+    "es": "¿En qué puedo ayudarte?",
+    "gl": "En que podo axudarche?",
+    "en": "How can I help?"
+  },
+  "form.message": {
+    "es": "Mensaje",
+    "gl": "Mensaxe",
+    "en": "Message"
+  },
+  "form.messagePh": {
+    "es": "Escribe aquí tu mensaje...",
+    "gl": "Escribe aquí a túa mensaxe...",
+    "en": "Write your message here..."
+  },
+  "form.submit": {
+    "es": "Enviar mensaje",
+    "gl": "Enviar mensaxe",
+    "en": "Send message"
+  },
+  "form.direct": {
+    "es": "También puedes escribirme directamente en ",
+    "gl": "Tamén podes escribirme directamente en ",
+    "en": "You can also email me directly at "
+  },
+  "footer.copy": {
+    "es": "© {year} XS12 Visuals",
+    "gl": "© {year} XS12 Visuals",
+    "en": "© {year} XS12 Visuals"
+  },
+  "cta.project": {
+    "es": "Conoce más sobre el proyecto",
+    "gl": "Coñece máis sobre o proxecto",
+    "en": "Learn more about the project"
+  },
+  "cta.portfolio": {
+    "es": "Observar el portfolio completo",
+    "gl": "Observar o portfolio completo",
+    "en": "View the full portfolio"
+  },
+  "cta.science": {
+    "es": "Conoce la sección de ciencia",
+    "gl": "Coñece a sección de ciencia",
+    "en": "Explore the science section"
+  },
+  "cta.news": {
+    "es": "Ver todas las novedades",
+    "gl": "Ver todas as novidades",
+    "en": "See all news"
+  },
+  "cta.about": {
+    "es": "Conoce más sobre mí",
+    "gl": "Coñece máis sobre min",
+    "en": "Learn more about me"
+  },
+  "cta.contact": {
+    "es": "Ir a contacto",
+    "gl": "Ir a contacto",
+    "en": "Go to contact"
+  }
+}
