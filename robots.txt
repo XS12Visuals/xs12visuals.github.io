@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://xs12visuals.github.io/sitemap.xml
